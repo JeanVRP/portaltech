@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200;1,400&family=Rowdies:wght@300&family=Sofia+Sans+Semi+Condensed:ital@1&display=swap');
+
+:root {
+    --font--: "Raleway"
+}
+
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: var(--font--);
+}
+
+.container-header {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    justify-content: center;
+    font-size: 2em;
+}
+
+
+.container-header img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: animation-img 10s infinite;
+    opacity: .4;
+    filter: blur(3px);
+}
+
+@keyframes animation-img {
+    from {
+        transform: scale(1.2);
+
+    }
+
+    to {
+        transform: scale(1);
+
+    }
+
+}
+
+.descricao-header {
+    z-index: 1;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    animation: animation-header 2s;
+    transition: all .2s ease;
+    cursor: pointer;
+
+}
+
+.descricao-header:hover {
+
+    transform: scale(1.2);
+}
+
+@keyframes animation-header {
+    from {
+        transform: translateY(-100rem);
+    }
+
+    to {
+        transform: translate(0);
+
+    }
+
+}
+
+.descricao-header h2 {
+    font-size: 30px;
+
+}
+
+.conteudo-header {
+    z-index: 1;
+    margin: 0 auto;
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 5rem;
+    background-color: rgba(255, 255, 255, 0.212);
+    padding: 5rem;
+    position: relative;
+    animation: animation-conteudo 2s;
+
+}
+
+@keyframes animation-conteudo {
+    from {
+        transform: translateY(100rem)
+    }
+
+    to {
+        transform: translateY(0);
+
+    }
+
+}
+
+.card {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    width: 15rem;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.card i {
+    font-size: 7rem;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+.icones {
+    z-index: 1;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    gap: 5rem;
+    width: 100%;
+    justify-content: center;
+    font-size: 2.5rem;
+    transition: all .2s ease;
+    cursor: pointer;
+    animation: animation-icones 2s;
+}
+@keyframes animation-icones {
+    from{
+        transform: translateX(100rem);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
+
+.icones i {
+    transition: all .2s;
+}
+
+.icones i:hover {
+    transform: scale(1.5);
+}
